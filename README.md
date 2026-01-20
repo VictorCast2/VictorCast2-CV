@@ -4,19 +4,28 @@ Este proyecto es un **Currículum Vitae Web interactivo**, desarrollado con **HT
 
 El CV está estructurado de forma modular, facilitando la personalización de secciones como experiencia, educación, habilidades y más.
 
----
+## ✨ Características principales
 
-## 🚀 Características
+- 📱 **Diseño responsive**, adaptable a distintos dispositivos
+- 🧩 **Estructura modular y reutilizable**, fácil de mantener y personalizar
+- 🎨 **Personalización sencilla** mediante variables CSS
+- 🖨️ **Exportación a PDF en formato A4** usando `html2pdf`
+- 📄 **Estructura optimizada para impresión** en tamaño A4
+- 🧼 **Interfaz limpia y enfocada en la legibilidad**
+- ✏️ **Secciones editables**:
+  - 💼 Experiencia profesional
+  - 🎓 Educación
+  - 🛠️ Habilidades
+  - 👤 Información personal
+- 🔤 **Tipografía moderna** con Google Fonts (Poppins)
+- 🎯 **Iconografía integrada** con Boxicons
 
-- 📱 Diseño responsive
-- 🎨 Uso de variables CSS para fácil personalización
-- 🖨️ Exportación a PDF mediante `html2pdf`
-- 📄 Estructura optimizada para formato A4
-- 🧩 Secciones modulares y reutilizables
-- 🔤 Tipografía moderna con Google Fonts (Poppins)
-- 🎯 Iconos con Boxicons
 
----
+## 🚀 Proyecto desplegado
+
+🔗 **Ver CV en línea:**  
+https://victorcast2-cv.netlify.app/
+
 
 ## 🛠️ Tecnologías Utilizadas
 
