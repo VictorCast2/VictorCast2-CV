@@ -32,22 +32,32 @@ function scrollActive() {
     sections.forEach((current) => {
         const sectionHeight = current.offsetHeight;
         const sectionTop = current.offsetTop - 50;
-        sectionId = current.getAttribute("id");
+        const sectionId = current.getAttribute("id"); // 👈 AQUÍ ESTABA EL ERROR
 
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            document
-                .querySelector(".nav__menu a[href*=" + sectionId + "]")
-                .classList.add("active-link");
-        } else {
-            document
-                .querySelector(".nav__menu a[href*=" + sectionId + "]")
-                .classList.remove("active-link");
+        const link = document.querySelector(
+            ".nav__menu a[href*='" + sectionId + "']"
+        );
+
+        if (link) { // 👈 evita errores si no existe el link
+            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                link.classList.add("active-link");
+            } else {
+                link.classList.remove("active-link");
+            }
         }
     });
 }
+
 window.addEventListener("scroll", scrollActive);
 
+
 /*==================== SHOW SCROLL TOP ====================*/
+function scrollTop(){
+    const scrollTop = document.getElementById('scroll-top');
+    // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
+    if(this.scrollY >= 200) scrollTop.classList.add('show-scroll'); else scrollTop.classList.remove('show-scroll')
+}
+window.addEventListener('scroll', scrollTop)
 
 /*==================== DARK LIGHT THEME ====================*/
 

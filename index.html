@@ -41,6 +41,9 @@
 
     <!--========== Css ==========-->
     <link rel="stylesheet" href="Assets/Css/Styles.Css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 
     <!--========== Titulo ==========-->
     <title>Curriculum - VictorCast2</title>
@@ -113,7 +116,7 @@
                     <!-- Theme change button -->
                     <div class="home__container section bd-grid">
                         <div class="home__data bd-grid">
-                            <img src="Assets/Img/Perfil.jpg" loading="eager" alt="Foto de Perfil de Victor Cast2"
+                            <img src="Assets/Img/Perfil.jpg" loading="lazy" alt="Foto de Perfil de Victor Cast2"
                                 class="home__img" />
 
                             <h1 class="home__title">Victor José Castillo Castro</h1>
@@ -356,30 +359,120 @@
                 </section>
 
                 <!--========== Certificates ==========-->
-                <section class="certificate section" id="certificates"></section>
+                <section class="certificate section" id="certificates">
+                    <h2 class="section-title">Certificates</h2>
+
+                    <div class="certificate__container bd-grid">
+                        <div class="certificate__content">
+                            <h3 class="certificate__title">Certified for compliance in the software ( Ux / UI )</h3>
+                            <p class="certificate__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ipsum minus velit vitae quaerat, reiciendis est fuga eos aliquid in reprehenderit delectus tenetur nisi repellendus amet! Quasi assumenda repellendus similique.</p>
+                        </div>
+                    </div>
+
+                    <div class="certificate__container bd-grid">
+                        <div class="certificate__content">
+                            <h3 class="certificate__title">Certified for compliance in the software ( Ux / UI )</h3>
+                            <p class="certificate__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ipsum minus velit vitae quaerat, reiciendis est fuga eos aliquid in reprehenderit delectus tenetur nisi repellendus amet! Quasi assumenda repellendus similique.</p>
+                        </div>
+                    </div>
+
+                    <div class="certificate__container bd-grid">
+                        <div class="certificate__content">
+                            <h3 class="certificate__title">Certified for compliance in the software ( Ux / UI )</h3>
+                            <p class="certificate__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ipsum minus velit vitae quaerat, reiciendis est fuga eos aliquid in reprehenderit delectus tenetur nisi repellendus amet! Quasi assumenda repellendus similique.</p>
+                        </div>
+                    </div>
+                </section>
 
                 <!--========== References ==========-->
-                <section class="references section" id="references"></section>
+                <section class="references section" id="references">
+                    <h2 class="section-title">References</h2>
+
+                    <div class="references__contianer bd-grid">
+                        <div class="references__content bd-grid">
+                            <span class="references__subtitle">Sr. Director</span>
+                            <h3 class="references__title">Mr. Clay Doe</h3>
+                            <ul class="references__contact">
+                                <li>Phone: 1234567890</li>
+                                <li>Email: user@mail.com</li>
+                            </ul>
+                        </div>
+
+                        <div class="references__content bd-grid">
+                            <span class="references__subtitle">Sr. Director</span>
+                            <h3 class="references__title">Mr. Clay Doe</h3>
+                            <ul class="references__contact">
+                                <li>Phone: 1234567890</li>
+                                <li>Email: user@mail.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
 
                 <!--========== Languages ==========-->
-                <section class="languages section"></section>
+                <section class="languages section">
+                    <h2 class="section-title">Languages</h2>
+
+                    <div class="languages__container">
+                        <ul class="languages__content bd-grid">
+                            <li class="languages__name">
+                                <span class="languages__circle"></span> Spanish
+                            </li>
+                            <li class="languages__name">
+                                <span class="languages__circle"></span> English
+                            </li>
+                        </ul>
+                    </div>
+                </section>
 
                 <!--========== Interests ==========-->
-                <section class="interests section"></section>
+                <section class="interests section">
+                    <h2 class="section-title">Interests</h2>
+                    
+                    <div class="interests__container bd-grid">
+                        <div class="interests__content">
+                            <i class='bxr  bx-headphone-alt-2 interests__icon music'></i>
+                            <span class="interests__name">Music</span>
+                        </div>
+
+                        <div class="interests__content">
+                            <i class='bxr  bx-book-bookmark interests__icon read'></i> 
+                            <span class="interests__name">Read</span>
+                        </div>
+
+                        <div class="interests__content">
+                            <i class='bxr  bx-football interests__icon soccer'></i> 
+                            <span class="interests__name">Soccer</span>
+                        </div>
+
+                        <div class="interests__content">
+                            <i class='bxr  bx-luggage interests__icon travel'></i>
+                            <span class="interests__name">Travel</span>
+                        </div>
+
+                        <div class="interests__content">
+                            <i class='bxr  bx-gaming interests__icon video-games'></i> 
+                            <span class="interests__name">Video Games</span>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
     </main>
 
     <!--========== SCROLL TOP ==========-->
+    <a href="#" class="scrolltop" id="scroll-top">
+        <i class='bxr  bx-arrow-up-stroke scrolltop__icon'></i> 
+    </a>
 
     <!--========== HTML2PDF ==========-->
-    <script src="Assets/Js/html2pdf.bundle.min.Js"></script>
+    <script src="Assets/Js/html2pdf.bundle.min.Js" defer></script>
 
     <!--========== MAIN JS ==========-->
-    <script src="Assets/Js/Main.Js"></script>
+    <script type="module" src="Assets/Js/Main.Js" defer></script>
 
     <!--========== Icons JS ==========-->
-    <script src="https://kit.fontawesome.com/f5df48790d.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/f5df48790d.js" crossorigin="anonymous" defer></script>
 </body>
 
 </html>
