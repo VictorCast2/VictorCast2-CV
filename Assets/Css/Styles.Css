@@ -54,8 +54,10 @@
   --bd-color-angular: #DD0031;
 
   /*==========  Backend ==========*/
---bd-color-java-top: #E11D2E;    /* rojo Java */
---bd-color-java-bottom: #007396; /* azul Java */
+  --bd-color-java-top: #E11D2E;
+  /* rojo Java */
+  --bd-color-java-bottom: #007396;
+  /* azul Java */
   --bd-color-spring: #6DB33F;
   --bd-color-python: #FFD43B;
 
@@ -117,7 +119,7 @@ body.scale-cv {
 
 /*========== Generate PDF button ==========*/
 .generate-pdf {
-  display:none;
+  display: none;
   position: absolute;
   top: 2.2rem;
   left: 0;
@@ -141,7 +143,7 @@ body.scale-cv {
 }
 
 .scale-cv .section {
-  padding: 1.5rem 0 .80rem;
+  padding: 1rem 0 .60rem;
 }
 
 .scale-cv .section-title {
@@ -253,7 +255,7 @@ img {
 
 /*========== Class Css ==========*/
 .section {
-  padding: 1.5rem 0;
+  padding: 1rem 0;
 }
 
 .section-title {
@@ -276,7 +278,7 @@ img {
 
 .bd-grid {
   display: grid;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .l-header {
@@ -297,6 +299,12 @@ img {
   justify-content: space-between;
   align-items: center;
 }
+
+p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 
 @media screen and (max-width:968px) {
   .nav__menu {
@@ -426,7 +434,7 @@ img {
 }
 
 .home__mail,
-.home__location, 
+.home__location,
 .home__phone {
   display: flex;
   align-items: center;
@@ -479,10 +487,25 @@ img {
 }
 
 
-.social__link:hover .linkedin { color: var(--bd-color-linkedin); transform: scale(1.2); }
-.social__link:hover .facebook { color: var(--bd-color-facebook); transform: scale(1.2); }
-.social__link:hover .youtube  { color: var(--bd-color-youtube);  transform: scale(1.2); }
-.social__link:hover .github   { color: var(--bd-color-github);   transform: scale(1.2); }
+.social__link:hover .linkedin {
+  color: var(--bd-color-linkedin);
+  transform: scale(1.2);
+}
+
+.social__link:hover .facebook {
+  color: var(--bd-color-facebook);
+  transform: scale(1.2);
+}
+
+.social__link:hover .youtube {
+  color: var(--bd-color-youtube);
+  transform: scale(1.2);
+}
+
+.social__link:hover .github {
+  color: var(--bd-color-github);
+  transform: scale(1.2);
+}
 
 /*========== PROFILE ==========*/
 .profile__description {
@@ -558,13 +581,13 @@ img {
 /* In Process / En proceso */
 .education__status[data-status="process"] {
   background-color: var(--bd-color-python);
-  color:var(--title-color);
+  color: var(--title-color);
 }
 
 /* Finish / Finalizado */
 .education__status[data-status="finish"] {
   background-color: var(--bd-color-mongo);
-  color:var(--title-color);
+  color: var(--title-color);
 
 }
 
@@ -582,11 +605,58 @@ img {
   gap: .75rem;
 }
 
-.languages__content {
-  gap: 0;
+/*========== LANGUAGES – CLEAN PROGRESS ==========*/
+
+/*========== LANGUAGES – COMPACT CV STYLE ==========*/
+
+.languages__item {
+  display: flex;
+  flex-direction: column;
+  gap: .15rem;
 }
 
-.skills__name, 
+.languages__row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.languages__label {
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+}
+
+.languages__level {
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
+}
+
+/* Barra tipo línea */
+.languages__bar {
+  width: 100%;
+  height: 3px;
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  background-color: var(--container-color-alt);
+}
+
+/* Progreso */
+.languages__bar::-webkit-progress-value {
+  background-color: var(--text-color);
+}
+
+.languages__bar::-webkit-progress-bar {
+  background-color: var(--container-color-alt);
+}
+
+.languages__bar::-moz-progress-bar {
+  background-color: var(--text-color);
+}
+
+
+.skills__name,
 .languages__name {
   display: flex;
   align-items: center;
@@ -598,15 +668,6 @@ img {
 .skills__title {
   font-size: var(--h3-font-size);
   margin-bottom: var(--mb-1);
-}
-
-.languages__circle {
-  display: inline-block;
-  width: 5px;
-  height: 5px;
-  background-color: var(--text-color);
-  border-radius: 50%;
-  margin-right: .75rem;
 }
 
 .skills__icon {
@@ -629,28 +690,64 @@ img {
 
 /*======== Skills Hovers ========*/
 
-.skills__name:hover .html    { color: var(--bd-color-html); }
-.skills__name:hover .css     { color: var(--bd-color-css); }
-.skills__name:hover .js      { color: var(--bd-color-js); }
-.skills__name:hover .react   { color: var(--bd-color-reac); }
-.skills__name:hover .angular { color: var(--bd-color-angular); }
+.skills__name:hover .html {
+  color: var(--bd-color-html);
+}
+
+.skills__name:hover .css {
+  color: var(--bd-color-css);
+}
+
+.skills__name:hover .js {
+  color: var(--bd-color-js);
+}
+
+.skills__name:hover .react {
+  color: var(--bd-color-reac);
+}
+
+.skills__name:hover .angular {
+  color: var(--bd-color-angular);
+}
+
 .skills__name:hover .java {
-  background: linear-gradient(
-    to bottom,
-    var(--bd-color-java-top),
-    var(--bd-color-java-bottom)
-  );
-  background-clip: text;           /* estándar */
-  -webkit-background-clip: text;   /* Chrome / Safari */
+  background: linear-gradient(to bottom,
+      var(--bd-color-java-top),
+      var(--bd-color-java-bottom));
+  background-clip: text;
+  /* estándar */
+  -webkit-background-clip: text;
+  /* Chrome / Safari */
   color: transparent;
 }
-.skills__name:hover .spring { color: var(--bd-color-spring); }
-.skills__name:hover .python { color: var(--bd-color-python); }
-.skills__name:hover .mysql { color: var(--bd-color-mysql); }
-.skills__name:hover .mongo { color: var(--bd-color-mongo); }
-.skills__name:hover .redis { color: var(--bd-color-redis); }
-.skills__name:hover .git    { color: var(--bd-color-git); }
-.skills__name:hover .docker { color: var(--bd-color-docker); }
+
+.skills__name:hover .spring {
+  color: var(--bd-color-spring);
+}
+
+.skills__name:hover .python {
+  color: var(--bd-color-python);
+}
+
+.skills__name:hover .mysql {
+  color: var(--bd-color-mysql);
+}
+
+.skills__name:hover .mongo {
+  color: var(--bd-color-mongo);
+}
+
+.skills__name:hover .redis {
+  color: var(--bd-color-redis);
+}
+
+.skills__name:hover .git {
+  color: var(--bd-color-git);
+}
+
+.skills__name:hover .docker {
+  color: var(--bd-color-docker);
+}
 
 .skills__name:hover .skills__icon {
   transform: scale(1.25);
@@ -666,8 +763,22 @@ img {
   margin-bottom: var(--mb-1);
 }
 
+.certificate__description {
+  font-size: var(--smaller-font-size);
+  line-height: 1.4;
+  color: var(--text-color);
+}
+
+.certificate__meta {
+  display: block;
+  margin-top: .35rem;
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
+  font-weight: var(--font-medium);
+}
+
 /*========== REFERENCES ==========*/
-.references__content{
+.references__content {
   gap: .25rem;
 }
 
@@ -685,7 +796,7 @@ img {
 }
 
 /*========== INTERESTS ==========*/
-.interests__container{
+.interests__container {
   grid-template-columns: repeat(3, 1fr);
   margin-top: var(--mb-2);
 }
@@ -733,34 +844,56 @@ img {
 /*========== MEDIA QUERIES ==========*/
 /* For small devices, menu two columns */
 @media screen and (max-width:320px) {
+
   .nav__list {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem .5rem
   }
+
 }
 
 /* Classes modified for large screen size */
 @media screen and (min-width:968px) {
+
   body {
     margin: 3rem 0;
   }
 
+  @page {
+    size: A4;
+    margin: 15mm;
+  }
+
+  /* Contenedor centrado */
   .bd-container {
     margin-left: auto;
     margin-right: auto;
+    max-width: 794px;
+    /* A4 real */
   }
 
+  /* Ocultar elementos no imprimibles */
   .l-header,
   .scrolltop {
     display: none;
   }
 
-  .resume {
-    display: grid;
-    grid-template-columns:  .5fr 1fr;
-    background-color: var(--container-color);
-    box-shadow: 0 0 8px rgba(13,12,12,.15);
+  .education__status {
+    display: none;
   }
+
+  /* Layout principal */
+  .resume {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2rem;
+  width: 794px;
+  min-height: auto; /* 👈 IMPORTANTE */
+  margin: 0 auto;
+  background-color: var(--container-color);
+  box-shadow: none;
+}
+
 
   .resume__left {
     background-color: var(--container-color-alt);
@@ -771,6 +904,7 @@ img {
     padding: 0 1.5rem;
   }
 
+  /* Botón PDF solo en desktop */
   .generate-pdf {
     display: inline-block;
   }
@@ -788,6 +922,7 @@ img {
     display: none;
   }
 
+  /* Ajustes grid */
   .references__contianer {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -797,8 +932,130 @@ img {
   }
 
   .interests__container {
-    grid-template-columns: repeat(4, max-content);
+    grid-template-columns: repeat(3, max-content);
     column-gap: 3.5rem;
+  }
+
+  /* ====== CLAVE PARA PDF (ANTI-CORTES) ====== */
+  section,
+  .education__content,
+  .experience__content,
+  .certificate__content,
+  .skills__content,
+  .references__content {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Texto más legible en PDF */
+  p {
+    line-height: 1.45;
+  }
+
+  /*========== EXPERIENCE CORRECCIÓN FINAL (igual a Education) ==========*/
+
+  .experience__content {
+    display: flex;
+  }
+
+  .experience__time {
+    padding-right: 1rem;
+  }
+
+  .experience__rounder {
+    position: relative;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: var(--text-color-light);
+    border-radius: 50%;
+    margin-top: .25rem;
+  }
+
+  .experience__line {
+    display: block;
+    width: 2px;
+    height: 110%;
+    background-color: var(--text-color-light);
+    transform: translate(7px, 0);
+  }
+
+  .scale-cv .education__container,
+  .scale-cv .experience__container,
+  .scale-cv .certificate__container {
+    gap: .85rem;
+  }
+
+  .scale-cv .education__time,
+  .scale-cv .experience__time {
+    padding-right: .6rem;
+  }
+
+  .scale-cv .education__rounder,
+  .scale-cv .experience__rounder {
+    width: 10px;
+    height: 10px;
+    margin-top: .2rem;
+  }
+
+  .scale-cv .languages__bar {
+    height: 2px;
+  }
+
+  .scale-cv .languages__row {
+    margin-bottom: .1rem;
+  }
+
+  .experience__title {
+    font-size: .9rem;
+    font-weight: 600;
+    margin-bottom: .25rem;
+  }
+
+  .experience__company {
+    font-size: .75rem;
+    color: var(--text-color-light);
+    margin-bottom: .4rem;
+  }
+
+  .experience__description {
+    font-size: .78rem;
+    line-height: 1.45;
+  }
+
+  .education__title {
+    font-size: .9rem;
+    font-weight: 600;
+  }
+
+  .education__studies {
+    font-size: .78rem;
+  }
+
+  .education__year {
+    font-size: .7rem;
+    color: var(--text-color-light);
+  }
+
+  .scale-cv section {
+    margin-bottom: .9rem;
+  }
+
+  .scale-cv .experience__rounder {
+    width: 11px;
+    height: 11px;
+    margin-top: .22rem;
+  }
+
+  .scale-cv .experience__line {
+    width: 1px;
+    height: 110%;
+    transform: translate(5px, 0);
+  }
+
+  p {
+    text-align: justify;
+    text-justify: inter-word;
   }
 
 }
