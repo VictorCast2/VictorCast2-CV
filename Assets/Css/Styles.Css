@@ -70,6 +70,15 @@
   --bd-color-git: #F05032;
   --bd-color-docker: #2496ED;
 
+  /*========== Interests  ==========*/
+--bd-color-music: #6366F1;
+--bd-color-read: #3B82F6;
+--bd-color-soccer: #22C55E;
+--bd-color-travel: #F59E0B;
+--bd-color-video_games: #0070D1;
+--bd-color-math: #14B8A6;
+
+
 }
 
 /*========== Base ==========*/
@@ -813,6 +822,40 @@ p {
   margin-bottom: .25rem;
 }
 
+/* Transición solo para el icono */
+.interests__icon {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover en TODO el bloque, pero SOLO afecta al icono */
+.interests__content:hover .interests__icon {
+  transform: scale(1.25);
+}
+
+/* Colores por interés (se activan aunque toques el texto) */
+.interests__content:hover .music {
+  color: var(--bd-color-music);
+}
+
+.interests__content:hover .read {
+  color: var(--bd-color-read);
+}
+
+.interests__content:hover .soccer {
+  color: var(--bd-color-soccer);
+}
+
+.interests__content:hover .travel {
+  color: var(--bd-color-travel);
+}
+
+.interests__content:hover .video_games {
+  color: var(--bd-color-video_games);
+}
+
+.interests__content:hover .math {
+  color: var(--bd-color-math);
+}
 
 /* Scroll top */
 .scrolltop {
